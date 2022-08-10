@@ -1,24 +1,17 @@
 
-import { useState } from "react";
 import Card from "./Card";
 import Scroll from "./Scroll";
 import SearchBox from "./SearchBox";
 
 const CardsList = (props) => {
-    let [list,setList] = useState(props.list);
-
-    const onSearchTermChange = (e)=>{
-        let newList = props.list.filter(x=> x.name.toLowerCase().includes(e.target.value.toLowerCase()));
-        setList(newList);
-    };
-    
+    const {list, onSearchChanges} = props;
     return (
         <div>
-            <SearchBox onChange={onSearchTermChange} />
+            <SearchBox onChange={onSearchChanges} />
             <Scroll>
                 <div className="cards-container">
-                    {list.map((val)=>{
-                        return <Card key={val.id} imageAddress={`https://robohash.org/${val.name}`} {...val} />;
+                    {list.map( item => {
+                        return  <Card key={item.id} {...item} /> ;
                     })}
                 </div>
             </Scroll>
