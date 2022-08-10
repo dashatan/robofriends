@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/robofriends/static/css/main.16a9d603.css",
-    "main.js": "/robofriends/static/js/main.178371d8.js",
+    "main.css": "/robofriends/static/css/main.4936d79d.css",
+    "main.js": "/robofriends/static/js/main.90152c9b.js",
     "service-worker.js": "/robofriends/service-worker.js",
     "index.html": "/robofriends/index.html",
-    "main.16a9d603.css.map": "/robofriends/static/css/main.16a9d603.css.map",
-    "main.178371d8.js.map": "/robofriends/static/js/main.178371d8.js.map"
+    "main.4936d79d.css.map": "/robofriends/static/css/main.4936d79d.css.map",
+    "main.90152c9b.js.map": "/robofriends/static/js/main.90152c9b.js.map"
   },
   "entrypoints": [
-    "static/css/main.16a9d603.css",
-    "static/js/main.178371d8.js"
+    "static/css/main.4936d79d.css",
+    "static/js/main.90152c9b.js"
   ]
 }
