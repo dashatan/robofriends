@@ -6,8 +6,10 @@ const initialState = {
     error:""
 };
 
+const AuthorizationKey = "m_NqCWkEu7XYSQkULEWBaQ";
+
 export const fetchUsers = createAsyncThunk("user/fetchUsers",()=>{
-    return fetch("https://jsonplaceholder.typicode.com/users")
+    return fetch(`https://api.generated.photos/api/v1/faces?api_key=${AuthorizationKey}`)
         .then(response=> response.json());
 });
 

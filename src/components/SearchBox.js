@@ -1,7 +1,14 @@
-const SearchBox = (props)=>{
+const SearchBox = ({id, className, placeHolder, searchTerm, onChange})=>{
     return (
         <div className="search-container">
-            <input type="search" name="search" id="search" placeholder="Search in users" value={props.searchTerm} onChange={props.onChange} />
+            <input 
+                type="search" 
+                id={id || "search"} 
+                className={className || "search"}
+                placeholder={placeHolder || "search"}
+                value={searchTerm}
+                onChange={onChange}
+            />
         </div>
     );
 };

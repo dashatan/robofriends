@@ -3,10 +3,13 @@
   flex-direction: column;
   border-radius: 1rem;
   align-items: center;
-  justify-content: center;
-  background: slategray;
+  justify-content: flex-start;
+  background: linear-gradient(45deg, #e75252, #f12570fa);
   color: aliceblue;
   width: 15rem;
+  overflow: hidden;
+  padding: 0.75rem;
+  height: 22rem;
 }
 .card:hover{
   transform: scale(1.05);
@@ -14,7 +17,9 @@
   cursor: pointer;
 }
 .card img{
-  width: 100%;
+  width: 80%;
+  border-radius: 50%;
+  background: rgb(45, 45, 45);
 }
 .card h2{
   text-align: center;
@@ -37,7 +42,7 @@ body{
   justify-content: center;
   color: aliceblue;
   margin: 10px;
-  background: darkcyan;
+  background: linear-gradient(45deg, #e75252, #f12570fa);
   border-radius: 1rem;
 }
 .app header h2{
@@ -49,11 +54,12 @@ body{
   justify-content: center;
   padding: 1rem;
 }
-.app .search-container #search{
+.app .search-container .search-box{
   height: 2.5rem;
   width: 75%;
   font-size: large;
   padding: 0 1rem;
+  outline: none;
 }
 
 .scrollable{
