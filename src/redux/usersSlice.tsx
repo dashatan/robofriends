@@ -1,10 +1,16 @@
 import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 
+interface  InitialState  {
+    loading: boolean,
+    users: any[],
+    error: string | undefined
+} ;
+
 const initialState = {
-    loading:false,
-    users:[],
-    error:""
-};
+    loading: false,
+    users: [],
+    error: ""
+} as InitialState;
 
 const AuthorizationKey = "m_NqCWkEu7XYSQkULEWBaQ";
 
@@ -16,21 +22,22 @@ export const fetchUsers = createAsyncThunk("user/fetchUsers",()=>{
 export const usersSlice = createSlice({
     name: "users",
     initialState,
-    extraReducers:(builder)=>{
+    extraReducers: (builder) => {
         builder.addCase(fetchUsers.pending, (state) => {
             state.loading = true;
         });
         builder.addCase(fetchUsers.fulfilled, (state, action) => {
-            state.loading =false;
-            state.users = action.payload; 
+            state.loading = false;
+            state.users = action.payload;
             state.error = "";
         });
         builder.addCase(fetchUsers.rejected, (state, action) => {
-            state.loading =false;
-            state.users = []; 
+            state.loading = false;
+            state.users = [];
             state.error = action.error.message;
         });
-    }
+    },
+    reducers: {}
 });
 
 

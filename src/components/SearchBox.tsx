@@ -1,4 +1,11 @@
-const SearchBox = ({id, className, placeHolder, searchTerm, onChange})=>{
+type SearchBoxProps = {
+    id: string,
+    className: string,
+    placeHolder: string,
+    searchTerm: string,
+    onChange: ()=>{},
+}
+const SearchBox = ({id, className, placeHolder, searchTerm, onChange}: SearchBoxProps) => {
     return (
         <div className="search-container">
             <input 

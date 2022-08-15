@@ -1,16 +1,23 @@
-
 import Card from "./Card";
 import Scroll from "./Scroll";
 import SearchBox from "./SearchBox";
 
-const CardsList = ({list, onSearchChanges, searchPlaceHolder}) => {
+interface Props {
+    list: any[],
+    onSearchChanges: any, 
+    searchPlaceHolder: string,
+    searchTerm: string,
+}
+
+const CardsList = ({list, onSearchChanges, searchPlaceHolder, searchTerm}: Props) => {
     return (
         <div>
             <SearchBox 
                 id="search-robots"
                 className="search-box"
                 onChange={onSearchChanges}
-                placeHolder={searchPlaceHolder}
+                placeHolder={searchPlaceHolder} 
+                searchTerm={searchTerm}      
             />
             <Scroll>
                 <div className="cards-container">
