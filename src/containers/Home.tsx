@@ -1,10 +1,9 @@
-import CardsList from "./components/CardsList";
-import "./App.css";
-import { search } from "./redux/searchSlice";
-import { useUsersQuery } from "./redux/api";
-import { useAppDispatch, useAppSelector } from "./redux/hooks";
+import CardsList from "../components/CardsList";
+import { search } from "../redux/searchSlice";
+import { useUsersQuery } from "../redux/api";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 
-function App() {
+function Home() {
     const searchTerm = useAppSelector((state: {search:{text:string}}) => state.search.text);
     const dispatch = useAppDispatch();
     const {data: users, error: usersError, isLoading: usersIsLoading} = useUsersQuery(1);
@@ -34,4 +33,4 @@ function App() {
     );
 }
 
-export default App;
+export default Home;

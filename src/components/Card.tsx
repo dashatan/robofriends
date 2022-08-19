@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type CardProps = {
     imageAddress: string,
     name:string,
@@ -7,7 +9,7 @@ type CardProps = {
 const Card = ({imageAddress, name, email}: CardProps) => {
     return (
         <div className="card">
-            <img src={imageAddress} alt={name}  />
+            <Image src={imageAddress} alt={name} width="200" height="200" />
             <h2>{name}</h2>
             <p>{email}</p>
         </div>
