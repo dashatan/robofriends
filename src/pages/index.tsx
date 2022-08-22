@@ -1,11 +1,11 @@
 import { Provider } from "react-redux";
-import Home from "../containers/Home";
+import HomeProvider from "../providers/HomeProvider";
 import { store } from "../redux/store";
 
 export default function Index() {
     return (
         <Provider store={store}>
-            <Home />
+            <HomeProvider />
         </Provider>
     );
 }

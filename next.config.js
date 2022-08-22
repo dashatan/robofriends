@@ -1,10 +1,16 @@
-const withPWA = require('next-pwa')
+const withPWA = require("next-pwa");
 
-module.exports = withPWA({
-  pwa: {
-    dest: 'public'
-  },
-  images: {
-    domains: ["robohash.org"]
-}
-})
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = withPWA({
+    pwa: {
+        dest: "public",
+        disable: process.env.ENVIRONMENT === "development" ? true : false,
+    },
+    images: {
+        domains: ["robohash.org"]
+    }
+});
+
+module.exports = nextConfig;
